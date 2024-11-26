@@ -29,4 +29,4 @@ RUN pip install --no-cache-dir -r /app/requirements.txt
 EXPOSE 8000
 
 # Définir le point d'entrée pour le conteneur
-CMD ["gunicorn", "--bind", "0.0.0.0:8000", "My_blog.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8000", "Mon_project_Django_CRUD.wsgi:application"]
