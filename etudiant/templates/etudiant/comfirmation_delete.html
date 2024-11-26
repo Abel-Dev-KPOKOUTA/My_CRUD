@@ -1,0 +1,10 @@
+{% extends 'etudiant/base.html' %}
+
+{% block content %}
+<div class="text-center">
+    <p  style="font-size: x-large;">Voulez-vous vraiment supprimer <strong>{{ etudiant.name}} ?</strong></p>
+    <a href="{% url 'etudiant:remove_student' etudiant.id %}"><button class="btn btn-danger">Oui</button></a>
+    <a href="{% url 'etudiant:ajouter_etudiant' %}"><button class="btn btn-success">Non</button></a>
+</div>
+{% endblock content %}
+

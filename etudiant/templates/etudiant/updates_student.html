@@ -1,0 +1,15 @@
+{% extends 'etudiant/base.html' %}
+
+{% block content %}
+<div class="row" style="padding-left: 300px;">
+    <div class="col-sm-8" offset-2>
+            <h4 class="alert alert alert-info">Modification d'information d'un etudiant </h4>
+            <form method="post">
+                {% csrf_token %}
+                {{ formular.as_p }}
+                <input type="submit" value="Modifier" class="btn btn-success">
+                <a href="{% url 'etudiant:ajouter_etudiant' %}" class="btn btn-info">Retour en arrière</a>
+            </form>
+    </div>
+</div>
+{% endblock %}
