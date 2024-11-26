@@ -13,13 +13,13 @@ def add_show(request):
         formular=UserForms()
     
     students=USER_ETUDIANT.objects.all()
-    context={"formular":formular , "students":students}
+    context={"formular":formular,"students":students}
     return render(request ,"etudiant/add_and_show.html",context)
 
 def modifier(request , book_id):
     etudiant=USER_ETUDIANT.objects.get(pk=book_id)
     if request.method=='POST':
-        formular=UserForms(request.POST , instance=etudiant)
+        formular=UserForms(request.POST,instance=etudiant)
         if formular.is_valid():
             formular.save()
             return redirect("etudiant:ajouter_etudiant")
@@ -27,7 +27,7 @@ def modifier(request , book_id):
         formular=UserForms(instance=etudiant)
     
     context={"formular":formular}
-    return render(request, "etudiant/updates_student.html" , context)
+    return render(request, "etudiant/updates_student.html",context)
 
 
 def supprimer(request,book_id):
