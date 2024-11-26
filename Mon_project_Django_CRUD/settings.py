@@ -13,7 +13,13 @@ SECRET_KEY = 'django-insecure-me5omex-lqxq9x4s1-90)_d!7!mnfvic^$9k62q=(z5hcwff@6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS =[
+    'node293a.containers.back4app.com', 
+    'mycrud-cdomd2d0.b4a.run', 
+    'localhost',
+    '127.0.0.1'
+    ]
+
 
 
 # Application definition
